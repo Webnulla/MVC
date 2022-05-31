@@ -1,0 +1,26 @@
+﻿@model WebCatalog.Domain.Entity.Catalog<WebCatalog.Domain.Entity.Products>
+
+@{
+    ViewData["Title"] = "Добавление новой категории";
+}
+
+
+@foreach (var products in Model.ProductsList)
+{
+    <div>@products.Id</div>
+    <div>@products.Name</div>
+    <div>@products.Description</div>
+    <div>@products.Price</div>
+}
+
+<form method="post">
+    Id: <input type="text" name="id" required />
+    <br/>
+    Name: <input type="text" name="name" />
+    <br/>
+    Description: <input type="text" name="description" />
+    <br/>
+    Price: <input type="text" name="price" />
+    <br/>
+    <input type="submit" name="submit" value="Создать" />
+</form>
