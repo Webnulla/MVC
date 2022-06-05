@@ -5,8 +5,7 @@ namespace WebCatalog.Controllers
 {
     public class CatalogController : Controller
     {
-        private Catalog<Products> _catalog = new Catalog<Products>();
-        private Catalog<Categories> _categories = new Catalog<Categories>();
+        private static Catalog _catalog = new Catalog();
 
         [HttpGet]
         public IActionResult Products()
@@ -15,23 +14,16 @@ namespace WebCatalog.Controllers
         }
 
         [HttpPost]
-        public IActionResult Products(Products model)
+        public IActionResult Products([FromForm] Products model)
         {
             _catalog.ProductsList.Add(model);
             return View(_catalog);
         }
 
         [HttpGet]
-        public IActionResult NewCategoryProducts()
+        public IActionResult ViewProducts()
         {
-            return View(_categories);
-        }
-
-        [HttpPost]
-        public IActionResult NewCategoryProducts(Categories model)
-        {
-            _categories.ProductsList.Add(model);
-            return View(_categories);
+            return View(_catalog);
         }
     }
 }

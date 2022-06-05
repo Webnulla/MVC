@@ -1,7 +1,7 @@
 ﻿namespace WebCatalog.Domain.Entity;
 
-public class Catalog<T>
+public class Catalog
 {
-    public List<T> ProductsList { get; set; } = new();
+    public List<Products> ProductsList { get; set; } = new();
 
 }
