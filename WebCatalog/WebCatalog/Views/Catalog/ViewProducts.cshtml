@@ -1,0 +1,15 @@
+﻿@model WebCatalog.Domain.Entity.Catalog
+
+@{
+    ViewData["Title"] = "Список продуктов";
+}
+
+@foreach (var products in Model.ProductsList)
+{
+    <div>_______________________________________________</div>
+    <div>Id продукта: @products.Id</div>
+    <div>Имя продукта: @products.Name</div>
+    <div>Описание продукта: @products.Description</div>
+    <div>Цена продукта: @products.Price</div>
+}
+
