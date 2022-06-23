@@ -1,4 +1,4 @@
-﻿@model WebCatalog.Domain.Entity.Catalog
+﻿@model WebCatalog.Domain.Entity.Products
 
 @{
     ViewData["Title"] = "Добавление продукта";
@@ -16,3 +16,7 @@
     <br/>
     <input type="submit" name="submit" value="Создать" />
 </form>
+
+<div>
+    <a asp-area="" asp-controller="Catalog" asp-action="SendMessage">Отправить сообщение</a>
+</div>

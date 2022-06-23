@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.3.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebCatalog.DAL\WebCatalog.DAL\WebCatalog.DAL.csproj" />
     <ProjectReference Include="..\WebCatalog.Domain\WebCatalog.Domain.csproj" />
   </ItemGroup>
 
