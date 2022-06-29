@@ -1,0 +1,19 @@
+﻿@model IReadOnlyList<WebCatalog.Domain.Entity.Products>
+@{
+    ViewData["Title"] = "Список продуктов";
+}
+
+<div class="text-center"></div>
+<h1>Список продуктов</h1>
+<div>__________________________________________________________</div>
+
+<p>Полный список: @Model.Count()</p>
+
+@foreach (var item in Model)
+{
+    <div>@item.Id</div>
+    <div>@item.Name</div>
+    <div>@item.Description</div>
+    <div>@item.Price</div>
+}
+
